@@ -1,0 +1,89 @@
+
+
+GIT COMMANDS:
+
+
+	SETUP:
+
+
+			Configuring user information used across all local repositories
+
+				
+				1) git config --global user.name "[your-firstname your-lastname]"
+
+				2) git config --global user.email "[your-valid-email]"
+
+
+
+
+	SETUP & INIT
+
+
+			git init   --->  Initialize your existing directory/folder as a Git repository (local repository obviously). Use this only if there is no remote repository if in case and you have to create a new repository from scratch on your local machine.
+
+			
+			git clone [url]   --->   To copy/retrieve an entire repository from a hosted location (Ex: GitHub) via URL (Https or SSH URL)
+
+			
+			git status   --->  To show current state/status of your local repo (Nothing but to show modified files in working directory)
+
+
+			git add .  --->  To add all the files in the current working directory to the staging area	
+
+
+
+			git add [file1] [file2]    ---> To stage specific files
+
+
+			git commit -m "a good descriptive message"    ---> To record your changes (It generates a unique Commit ID)
+
+
+			git diff     --->  Difference of what is changed but not staged
+
+
+
+
+	BRANCH & MERGE
+
+
+			git branch 
+
+					- List your branches. A * will appear next to the currently active branch
+
+
+			git branch [branch-name]
+					
+					- Create a new branch at the current commit
+
+					- git branch -v   --> will show the branch and its last commit
+
+					- 
+
+
+
+			git checkout [branch-name]
+					
+					- Switch to another branch and check it out into your working directory
+
+
+			git checkout -b [branch-name]
+					
+					- Create a new branch and switch to it.
+			
+
+			git log
+				
+				   - Show all commits in the current branch’s history
+
+
+	INSPECT & COMPARE
+
+		git log
+			- Show the commit history for the currently active branch
+
+
+		git log branchB..branchA
+			- Show the commits on branchA that are not on branchB
+
+		git diff branchB...branchA
+			- Show the diff of what is in branchA that is not in branchB
