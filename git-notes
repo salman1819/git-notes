@@ -1,0 +1,217 @@
+
+
+     GIT  
+
+        started by Linus Torvalds to manage linux kernel project...
+
+        Git is a Software management tool  -> allowing us to manage complex projects.
+
+        Most important (basic tool) every dev should be aware of.
+
+
+    
+
+     Any project, web app or non web app, we can use git to track changes.
+
+        Ex: Spring boot Java App, Python App, Simple .txt file etc.
+
+
+     	commit ID - Unique ID assigned for a commit 
+
+
+
+     	Github Repository 
+            Ex: 
+     			(FLAIR) project, Open Source projects hosted on GitHub are Kubernetes, Spring Boot etc. 
+
+     
+
+
+     	VCS (Version Control System) - software to help devs to work together
+
+     			Benefits: 
+
+     				- Allows devs to work simultaneously
+     				- Does not allow, overwriting each other's work changes
+     				- Maintains history of every version
+
+
+
+     			Types of VCS:
+
+     					Centralized VCS  (Not in use... deprecated/outdated in industry)
+
+     						One central remote repository / server for your code...
+     							
+     							- only single place to store ur code    -->   One remote server (centralized)
+
+
+
+
+     					Distributed VCS:	
+
+     							features: distributed 
+
+     								(Git)  Software / tool
+
+     									- Advantages:
+
+     											- Open source / free
+     											
+     											- Fast and small
+
+     											- no need of powerful hardware
+
+
+
+     					Git Terminologies:
+
+
+     							1) Local Repository  
+
+                                        - Repository in Git is a place where Git stores all the files. Git can store the files either on the local repository or on the remote repository.
+
+     									- no network needed to access local repository (short form: local repo)
+
+
+                                        - Changes to the local repo are only visible to the single developer who has access to it. Ex: Personal Laptop Owner
+
+
+     							2) Remote Repository
+
+     									- Open Source projects remote repos: Ex: Kubernetes (K8s), Daily-coding (salman/1819 user account's public repo), 
+
+
+     									- Every remote repo has a link (Ex: GitHub URL)
+
+     									- First step to get remote code in your laptop workspace ---> clone the remote repo  ---> copy it in local machine
+
+
+     							3) Staging area:  (lobby)
+
+     									- Place to review files
+
+     									- Before a commit, you can take a look at all changes in staging area
+
+     									- After that commit with message (Ex: git commit -m "updated template.yml")
+
+
+
+                                    Benefits of staging:
+
+                                        - Staging helps you split up one large change into multiple commits
+
+
+                                        - Staging helps in reviewing changes
+
+                                        - Basically, it is nothing but selecting the files for the next commit - this is the equivalent of git add, so you already using it if you use GUI like GitHub Desktop, GitKraken etc..
+
+                                        Refer this:  https://git-scm.com/downloads/guis
+
+
+
+
+                    Git Workflow:
+
+     					(Working directory)  -> add command (staging area)  ->  git commit -m "updated   template.yaml"  -> git push (to remote repository)
+
+
+
+
+     						     4) Commit   -> hold the current state
+
+     										SHA1 hash ()  - secure hash algorithm 1 (developed by US National Security Agency)
+
+     													"alpha numeric commit id  -> which is HexaDecimal format".
+
+                                                        - Hexadecimal means: 0-9 and a-f (a: 10, b: 11, .... f: 15)
+
+
+
+                                5) Push    -> To push your local changes to remote repository
+
+
+                                       Ex: git push origin <branch-name>
+
+                                       Set remote:
+
+                                            git remote add origin <your-remote-repository-URL>
+
+
+                                            git remote -v     ---> To verify that your  remote repository url is properly found
+
+
+
+
+
+
+                                6) Fork
+
+                                        It is a copy of a remote repository. So, forking a repository allows you to freely experiment with changes without affecting the original project
+
+                                        Ex: XYZ123/Daily-Coding-Problem is a forked repo from Original project salman1819/Daily-Coding-Problem
+
+
+                                        You can fetch updates from or submit changes to the original repository with pull requests.
+
+
+
+
+                                7) Personal Access Token (PAT)
+
+                                        As of Aug 2021, Personal access token are used instead of passwords for authentication to GitHub when using the GitHub API or the command line.
+
+
+                                        Personal access tokens can only be used for HTTPS Git operations.
+
+
+                                        Go to your Github account > Settings(Your profile icon on left side) > Developer settings(last item on right side) > Personal access tokens  > Create token (classic)
+
+                                        Official doc: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+
+
+
+                            8) Basic git workflow sample:
+
+
+
+                                Most common:
+
+                                    If remote repo is already existing, follow these steps:
+
+
+                                        - Fork the remote repo
+
+                                        - Clone your forked remote repo to local
+                                            Ex: git clone git@github.com:<your-github-username>/Daily-Coding-Problem.git
+
+                                        - check status
+
+                                            git status
+
+                                        - check the all branches
+
+                                            git branch -a  (green means local, red means remote)
+
+
+                                        - create a new local branch and switch to it
+
+                                            git checkout -b <choose-appropriate-branch-name>
+
+
+                                        - write code, make changes while you are on your new-local-branch
+
+
+                                        - add your changes (git add .) and commit using git commit -m "clear descriptive msg"
+
+                                    
+                                        -  git push -u origin <branch-name>  (To push / publish it on your forked remote repo thereby "creating" it on remote repo)
+
+                                           
+
+
+                                    - go to your remote repo (your github.com account and see your pushed changes on your remote repo!)
+
+
+                                    - compare branches by clicking branches on github.com. See what is present in main branch and your new remote branch.
